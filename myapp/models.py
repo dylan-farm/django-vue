@@ -10,3 +10,11 @@ class Book(models.Model):
 
     def __unicode__(self):
         return self.book_name
+
+
+class Note(models.Model):
+    note_name = models.CharField(max_length=64)
+    add_time = models.DateTimeField(auto_now_add=True)
+
+    def __unicode__(self):
+        return self.note_name

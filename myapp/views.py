@@ -15,7 +15,7 @@ def add_book(request):
         if request.method == 'POST':
             # book = Book(book_name=request.GET.get('book_name'))
             book = Book(book_name=json.loads(request.body)['parms'])
-            print(json.loads(request.body)['parms'])
+            # print(json.loads(request.body)['parms'])
             book.save()
             response['msg'] = 'success'
             response['error_num'] = 0

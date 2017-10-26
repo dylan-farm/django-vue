@@ -12,9 +12,13 @@ Vue.config.productionTip = false
 Vue.use(ElementUI)
 Vue.use(VueResource)
 /* eslint-disable no-new */
+// new Vue({
+//   el: '#app',
+//   router,
+//   template: '<App/>',
+//   components: { App }
+// })
 new Vue({
-  el: '#app',
-  router,
-  template: '<App/>',
-  components: { App }
-})
+  ...App,
+  router
+}).$mount('#app');
